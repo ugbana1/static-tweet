@@ -1,17 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+import React from "react"
+import ReactDOM from "react-dom"
+import "./index.css"
+import Avatar from "./Avatar"
+import Message from "./Message"
+import NameWithHandle from "./NameWithHandle"
+import Time from "./Time"
+import ReplyButton from "./ReplyButton"
+import RetweetButton from "./RetweetButton"
+import LikeButton from "./LikeButton"
+import MoreOptions from "./MoreOptions"
+function Tweet(){
+  return(
+    <div className="tweet">
+    <Avatar/>
+    
+    <div className ="content">
+    <Message/>
+    <NameWithHandle/><Time/>
+   <div className ="button">
+<ReplyButton/>
+<RetweetButton/>
+<LikeButton/>
+<MoreOptions/>
+   </div>
+</div>
+ </div>
+    
+  );
+}
+ReactDOM.render(<Tweet/>,document.querySelector("#root"))
